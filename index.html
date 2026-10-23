@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brow Art Studio | Beauty Services in Wyndham Vale</title>
+
+  <meta name="description" content="Brow Art Studio in Wyndham Vale offers eyebrow threading, waxing, facials, brow and lash tinting, brow henna, lash lift and brow lamination. Appointments essential.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff8fb;
+      color: #292929;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f0dbe5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: #c64d80;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #fff1f6, #ffffff);
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      color: #b83f72;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      background: #c64d80;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      margin: 6px;
+    }
+
+    .button.secondary {
+      background: #333;
+    }
+
+    .button.google {
+      background: white;
+      color: #b83f72;
+      border: 2px solid #b83f72;
+    }
+
+    section {
+      padding: 60px 6%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #b83f72;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      color: #555;
+    }
+
+    /* GOOGLE REVIEWS */
+
+    .reviews-section {
+      text-align: center;
+      background: #ffffff;
+      max-width: 100%;
+      padding: 55px 20px;
+      border-top: 1px solid #f2dce5;
+      border-bottom: 1px solid #f2dce5;
+    }
+
+    .reviews-card {
+      max-width: 700px;
+      margin: auto;
+      background: #fff8fb;
+      padding: 35px 25px;
+      border-radius: 20px;
+      border: 1px solid #f2dce5;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .stars {
+      font-size: 30px;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    .review-title {
+      font-size: 25px;
+      font-weight: 700;
+      color: #b83f72;
+      margin-bottom: 8px;
+    }
+
+    .review-text {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .review-note {
+      font-size: 13px;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      border: 1px solid #f2dce5;
+    }
+
+    .service h3 {
+      color: #c64d80;
+      margin-bottom: 15px;
+      font-size: 21px;
+    }
+
+    .service p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* PRICE LIST */
+
+    .price-list {
+      max-width: 750px;
+      margin: auto;
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 5px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .price-row:last-child {
+      border-bottom: none;
+    }
+
+    .price {
+      font-weight: 700;
+      color: #b83f72;
+    }
+
+    /* BOOKING */
+
+    .booking {
+      text-align: center;
+      background: #fff0f5;
+      border-radius: 20px;
+      padding: 45px 20px;
+    }
+
+    .booking h2 {
+      margin-bottom: 15px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 8px 0;
+    }
+
+    .contact a {
+      color: #b83f72;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #292929;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      section {
+        padding: 45px 20px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Brow Art Studio
+  </div>
+
+  <div class="tagline">
+    Beauty • Brows • Facials
+  </div>
+
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>
+      Brow Art Studio
+    </h1>
+
+    <p>
+      Beauty and brow services in Wyndham Vale, Victoria.
+      From eyebrow threading and waxing to facials, brow tinting,
+      lash lift and brow lamination.
+    </p>
+
+    <a class="button" href="tel:0432744406">
+      Call 0432 744 406
+    </a>
+
+    <a class="button secondary" href="sms:0432744406">
+      Send SMS
+    </a>
+
+  </section>
+
+
+  <!-- GOOGLE REVIEWS -->
+
+  <section class="reviews-section">
+
+    <div class="reviews-card">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <div class="review-title">
+        Loved by our customers
+      </div>
+
+      <p class="review-text">
+        Brow Art Studio has built a strong reputation for
+        quality brow and beauty services, with customers
+        consistently sharing positive experiences on Google.
+      </p>
+
+      <a
+        class="button google"
+        href="https://share.google/ydH5SYLV5wKy5w2xC"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ⭐ View us on Google
+      </a>
+
+      <p class="review-note">
+        Read our latest customer reviews and experiences on Google.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section>
+
+    <h2>
+      Our Services
+    </h2>
+
+    <div class="services">
+
+      <div class="service">
+
+        <h3>
+          Threading
+        </h3>
+
+        <p>
+          Eyebrow, upper lip, chin, sides, forehead and
+          full face threading.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <h3>
+          Facials
+        </h3>
+
+        <p>
+          Facial Clean Up, Lotus Facial, Bridal Glow,
+          O3 Facial and Korean Facial.
+          All listed facials include a back massage.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <h3>
+          Tint & Lift
+        </h3>
+
+        <p>
+          Eyebrow tint, eyelash tint, hybrid brow tint,
+          hybrid lash tint, brow henna, lash lift and
+          brow lamination.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <h3>
+          Waxing
+        </h3>
+
+        <p>
+          Eyebrow, upper lip, chin, sides, forehead,
+          half arms, full arms, half legs, full legs
+          and underarms.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRICE LIST -->
+
+  <section>
+
+    <h2>
+      Price List
+    </h2>
+
+    <div class="price-list">
+
+      <div class="price-row">
+        <span>Eyebrow Threading</span>
+        <span class="price">$10</span>
+      </div>
+
+      <div class="price-row">
+        <span>Upper Lip Threading</span>
+        <span class="price">$5</span>
+      </div>
+
+      <div class="price-row">
+        <span>Chin Threading</span>
+        <span class="price">$5</span>
+      </div>
+
+      <div class="price-row">
+        <span>Sides Threading</span>
+        <span class="price">$10</span>
+      </div>
+
+      <div class="price-row">
+        <span>Forehead Threading</span>
+        <span class="price">$5</span>
+      </div>
+
+      <div class="price-row">
+        <span>Full Face Threading</span>
+        <span class="price">$30</span>
+      </div>
+
+      <div class="price-row">
+        <span>Bleach</span>
+        <span class="price">$10</span>
+      </div>
+
+      <div class="price-row">
+        <span>Facial Clean Up</span>
+        <span class="price">$40</span>
+      </div>
+
+      <div class="price-row">
+        <span>Lotus Facial</span>
+        <span class="price">$50</span>
+      </div>
+
+      <div class="price-row">
+        <span>Bridal Glow</span>
+        <span class="price">$50</span>
+      </div>
+
+      <div class="price-row">
+        <span>O3 Facial</span>
+        <span class="price">$60</span>
+      </div>
+
+      <div class="price-row">
+        <span>Korean Facial</span>
+        <span class="price">$70</span>
+      </div>
+
+      <div class="price-row">
+        <span>Eyebrow Tint</span>
+        <span class="price">$10</span>
+      </div>
+
+      <div class="price-row">
+        <span>Eyelash Tint</span>
+        <span class="price">$15</span>
+      </div>
+
+      <div class="price-row">
+        <span>Hybrid Brow Tint</span>
+        <span class="price">$25</span>
+      </div>
+
+      <div class="price-row">
+        <span>Hybrid Lash Tint</span>
+        <span class="price">$30</span>
+      </div>
+
+      <div class="price-row">
+        <span>Brow Henna</span>
+        <span class="price">$35</span>
+      </div>
+
+      <div class="price-row">
+        <span>Lash Lift</span>
+        <span class="price">$50</span>
+      </div>
+
+      <div class="price-row">
+        <span>Brow Lamination</span>
+        <span class="price">$40</span>
+      </div>
+
+      <div class="price-row">
+        <span>Eyebrow Waxing</span>
+        <span class="price">$10</span>
+      </div>
+
+      <div class="price-row">
+        <span>Upper Lip Waxing</span>
+        <span class="price">$5</span>
+      </div>
+
+      <div class="price-row">
+        <span>Chin Waxing</span>
+        <span class="price">$5</span>
+      </div>
+
+      <div class="price-row">
+        <span>Sides Waxing</span>
+        <span class="price">$10</span>
+      </div>
+
+      <div class="price-row">
+        <span>Forehead Waxing</span>
+        <span class="price">$5</span>
+      </div>
+
+      <div class="price-row">
+        <span>Half Arms Waxing</span>
+        <span class="price">$15</span>
+      </div>
+
+      <div class="price-row">
+        <span>Full Arms Waxing</span>
+        <span class="price">$20</span>
+      </div>
+
+      <div class="price-row">
+        <span>Half Legs Waxing</span>
+        <span class="price">$20</span>
+      </div>
+
+      <div class="price-row">
+        <span>Full Legs Waxing</span>
+        <span class="price">$25</span>
+      </div>
+
+      <div class="price-row">
+        <span>Underarms Waxing</span>
+        <span class="price">$10</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOOKING -->
+
+  <section>
+
+    <div class="booking">
+
+      <h2>
+        Appointments Essential
+      </h2>
+
+      <p>
+        Brow Art Studio is an appointment-based business.
+        Please contact us before visiting.
+      </p>
+
+      <br>
+
+      <a class="button" href="tel:0432744406">
+        Call 0432 744 406
+      </a>
+
+      <a class="button secondary" href="sms:0432744406">
+        Send SMS
+      </a>
+
+      <p style="margin-top:20px;">
+        Promotions and specially priced service packages
+        may be available from time to time.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact">
+
+    <h2>
+      Contact Brow Art Studio
+    </h2>
+
+    <p>
+      <strong>Address:</strong>
+      12 Burchelli Way, Wyndham Vale VIC 3024, Australia
+    </p>
+
+    <p>
+      <strong>Phone:</strong>
+      <a href="tel:0432744406">
+        0432 744 406
+      </a>
+    </p>
+
+    <p>
+      <strong>Bookings:</strong>
+      Please contact us by WhatsApp, SMS or phone.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  © 2026 Brow Art Studio · Wyndham Vale, Victoria
+
+</footer>
+
+</body>
+</html>
