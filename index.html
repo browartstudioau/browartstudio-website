@@ -6,647 +6,2195 @@
 
   <title>Brow Art Studio | Beauty Services in Wyndham Vale</title>
 
-  <meta name="description" content="Brow Art Studio in Wyndham Vale offers eyebrow threading, waxing, facials, brow and lash tinting, brow henna, lash lift and brow lamination. Appointments essential.">
+  <meta name="description" content="Brow Art Studio in Wyndham Vale offers eyebrow threading, waxing, facials, brow and lash tinting and professional beauty services. Book your appointment today.">
+
+  <meta name="keywords" content="Brow Art Studio, eyebrow threading Wyndham Vale, eyebrows Wyndham Vale, waxing Wyndham Vale, facial Wyndham Vale, brow tinting, lash tinting, beauty salon Wyndham Vale">
+
+  <meta name="author" content="Brow Art Studio">
+
+  <meta property="og:title" content="Brow Art Studio | Beauty Services in Wyndham Vale">
+  <meta property="og:description" content="Professional eyebrow threading, waxing, facials, brow and lash tinting in Wyndham Vale.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.jpg">
+
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
 
   <style>
+    :root {
+      --black: #171515;
+      --dark: #211d1d;
+      --ivory: #f8f4ef;
+      --cream: #eee6dd;
+      --white: #ffffff;
+      --rose: #b87578;
+      --rose-dark: #965c60;
+      --gold: #b99a67;
+      --text: #292525;
+      --muted: #756d68;
+      --border: rgba(41, 37, 37, 0.12);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+      --radius: 18px;
+      --max-width: 1180px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #fff8fb;
-      color: #292929;
+      background: var(--ivory);
+      color: var(--text);
       line-height: 1.6;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      background: #ffffff;
-      padding: 22px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #f0dbe5;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
+      background: rgba(248, 244, 239, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
 
-    .logo {
-      font-size: 26px;
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .brand-text {
+      line-height: 1.1;
+    }
+
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
       font-weight: 700;
-      color: #c64d80;
+      letter-spacing: -0.4px;
     }
 
-    .tagline {
-      font-size: 13px;
-      color: #777;
+    .brand-location {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 5px;
     }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--rose-dark);
+    }
+
+    .nav-book {
+      background: var(--black);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+    }
+
+    .nav-book:hover {
+      color: white !important;
+      background: var(--rose-dark);
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #fff1f6, #ffffff);
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 25%, rgba(184, 117, 120, 0.16), transparent 28%),
+        radial-gradient(circle at 10% 80%, rgba(185, 154, 103, 0.10), transparent 25%),
+        var(--ivory);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(184, 117, 120, 0.18);
+      border-radius: 50%;
+      right: -230px;
+      top: -150px;
+    }
+
+    .hero-content {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: var(--rose-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: 46px;
-      color: #b83f72;
-      margin-bottom: 15px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 6vw, 78px);
+      line-height: 1.02;
+      letter-spacing: -2.5px;
+      font-weight: 500;
+      margin-bottom: 25px;
     }
 
-    .hero p {
-      max-width: 650px;
-      margin: 0 auto 25px;
+    .hero h1 span {
+      color: var(--rose-dark);
+      font-style: italic;
+    }
+
+    .hero-text {
+      max-width: 580px;
+      color: var(--muted);
       font-size: 18px;
-      color: #555;
+      line-height: 1.75;
+      margin-bottom: 32px;
     }
 
-    .button {
-      display: inline-block;
-      background: #c64d80;
-      color: white;
-      padding: 13px 25px;
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
       border-radius: 30px;
-      text-decoration: none;
       font-weight: 700;
-      margin: 6px;
+      font-size: 14px;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
     }
 
-    .button.secondary {
-      background: #333;
+    .btn-primary {
+      background: var(--black);
+      color: white;
     }
 
-    .button.google {
-      background: white;
-      color: #b83f72;
-      border: 2px solid #b83f72;
+    .btn-primary:hover {
+      background: var(--rose-dark);
+      transform: translateY(-2px);
     }
 
-    section {
-      padding: 60px 6%;
-      max-width: 1100px;
-      margin: auto;
+    .btn-secondary {
+      border-color: var(--black);
+      color: var(--black);
     }
 
-    section h2 {
-      text-align: center;
-      color: #b83f72;
-      font-size: 32px;
-      margin-bottom: 35px;
+    .btn-secondary:hover {
+      background: var(--black);
+      color: white;
     }
 
-    .intro {
-      text-align: center;
-      max-width: 750px;
-      margin: auto;
-      color: #555;
+    .hero-card {
+      background: var(--white);
+      padding: 14px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      transform: rotate(1.5deg);
     }
 
-    /* GOOGLE REVIEWS */
-
-    .reviews-section {
-      text-align: center;
-      background: #ffffff;
-      max-width: 100%;
-      padding: 55px 20px;
-      border-top: 1px solid #f2dce5;
-      border-bottom: 1px solid #f2dce5;
-    }
-
-    .reviews-card {
-      max-width: 700px;
-      margin: auto;
-      background: #fff8fb;
-      padding: 35px 25px;
+    .hero-card-inner {
+      min-height: 430px;
       border-radius: 20px;
-      border: 1px solid #f2dce5;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      background:
+        linear-gradient(rgba(23, 21, 21, 0.05), rgba(23, 21, 21, 0.05)),
+        var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
     }
 
-    .stars {
-      font-size: 30px;
-      letter-spacing: 4px;
-      margin-bottom: 10px;
+    .hero-logo {
+      width: min(65%, 260px);
+      margin: 0 auto 25px;
+      border-radius: 50%;
     }
 
-    .review-title {
-      font-size: 25px;
-      font-weight: 700;
-      color: #b83f72;
-      margin-bottom: 8px;
+    .hero-card-inner h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 500;
     }
 
-    .review-text {
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .review-note {
-      font-size: 13px;
-      color: #777;
+    .hero-card-inner p {
+      color: var(--muted);
       margin-top: 10px;
     }
 
-    /* SERVICES */
+    /* =========================
+       TRUST BAR
+    ========================= */
+
+    .trust-bar {
+      background: var(--black);
+      color: white;
+      padding: 22px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .trust-item {
+      padding: 8px 15px;
+    }
+
+    .trust-number {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      color: #e7cfa8;
+      font-weight: 600;
+    }
+
+    .trust-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.72);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+
+    /* =========================
+       SECTION COMMON
+    ========================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: -1.5px;
+      margin-bottom: 17px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services {
+      background: var(--white);
+    }
+
+    .service-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-    .service {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-      border: 1px solid #f2dce5;
+    .service-card {
+      padding: 32px;
+      border: 1px solid var(--border);
+      background: var(--ivory);
+      border-radius: var(--radius);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .service h3 {
-      color: #c64d80;
-      margin-bottom: 15px;
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .service-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      min-height: 70px;
+    }
+
+    .service-price {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
       font-size: 21px;
+      font-weight: 700;
     }
 
-    .service p {
-      color: #555;
-      font-size: 15px;
+    .book-small {
+      color: var(--rose-dark);
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    /* PRICE LIST */
+    /* =========================
+       FEATURED PRICES
+    ========================= */
+
+    .featured {
+      background: var(--ivory);
+    }
 
     .price-list {
-      max-width: 750px;
-      margin: auto;
-      background: white;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      background: var(--black);
+      color: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .price-header {
+      padding: 40px 45px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: end;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .price-header h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: 500;
+    }
+
+    .price-header p {
+      max-width: 400px;
+      color: rgba(255,255,255,0.65);
+      font-size: 14px;
     }
 
     .price-row {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      padding: 12px 5px;
-      border-bottom: 1px solid #eee;
+      gap: 30px;
+      padding: 25px 45px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
     }
 
     .price-row:last-child {
-      border-bottom: none;
+      border-bottom: 0;
     }
 
-    .price {
+    .price-row h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .price-row p {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .price-value {
+      font-size: 22px;
       font-weight: 700;
-      color: #b83f72;
+      white-space: nowrap;
+      color: #e7cfa8;
     }
 
-    /* BOOKING */
+    /* =========================
+       ABOUT
+    ========================= */
 
-    .booking {
-      text-align: center;
-      background: #fff0f5;
-      border-radius: 20px;
-      padding: 45px 20px;
+    .about {
+      background: var(--white);
     }
 
-    .booking h2 {
-      margin-bottom: 15px;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 90px;
+      align-items: center;
     }
 
-    /* CONTACT */
-
-    .contact {
-      text-align: center;
+    .about-logo {
+      background: var(--ivory);
+      border-radius: 30px;
+      padding: 60px;
+      box-shadow: var(--shadow);
     }
 
-    .contact p {
-      margin: 8px 0;
+    .about-logo img {
+      width: 100%;
+      max-width: 300px;
+      margin: auto;
+      border-radius: 50%;
     }
 
-    .contact a {
-      color: #b83f72;
-      font-weight: 700;
-      text-decoration: none;
+    .about-content h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 5vw, 58px);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 25px;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #292929;
-      color: #fff;
+    .about-content h2 span {
+      color: var(--rose-dark);
+      font-style: italic;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+
+    .about-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .about-point {
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--ivory);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* =========================
+       REVIEWS
+    ========================= */
+
+    .reviews {
+      background: var(--ivory);
+    }
+
+    .review-summary {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 45px;
+    }
+
+    .review-score {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 55px;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 23px;
+      letter-spacing: 3px;
+    }
+
+    .review-count {
+      color: var(--muted);
       font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
 
-      header {
-        flex-direction: column;
-        gap: 5px;
+    .review-card {
+      background: white;
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .review-card .stars {
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .review-card p {
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.75;
+      font-style: italic;
+    }
+
+    .review-name {
+      margin-top: 22px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .google-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .google-link a {
+      color: var(--rose-dark);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* =========================
+       BOOKING
+    ========================= */
+
+    .booking {
+      background: var(--black);
+      color: white;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .booking-content .eyebrow {
+      color: #d8b783;
+    }
+
+    .booking-content h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 5vw, 62px);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .booking-content p {
+      color: rgba(255,255,255,0.68);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 17px;
+    }
+
+    .contact-item {
+      padding: 18px 20px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+    }
+
+    .contact-label {
+      color: #d8b783;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+    }
+
+    .contact-value {
+      font-size: 15px;
+    }
+
+    .booking-form {
+      background: white;
+      color: var(--text);
+      padding: 38px;
+      border-radius: 22px;
+    }
+
+    .booking-form h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 31px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .booking-form > p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid #ddd4cd;
+      background: #faf8f6;
+      padding: 13px 14px;
+      border-radius: 9px;
+      outline: none;
+      color: var(--text);
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--rose);
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 20px;
+      background: var(--black);
+      color: white;
+      border: 0;
+      padding: 15px;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .form-submit:hover {
+      background: var(--rose-dark);
+    }
+
+    /* =========================
+       LOCATION
+    ========================= */
+
+    .location {
+      background: var(--white);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .location-card {
+      background: var(--ivory);
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .location-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 31px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .location-card p {
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .map-box {
+      min-height: 300px;
+      background:
+        linear-gradient(rgba(23,21,21,0.08), rgba(23,21,21,0.08)),
+        var(--cream);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .map-box h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .map-box p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #111010;
+      color: white;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 50px;
+      padding-bottom: 45px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .footer-brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .footer-brand h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .footer-about {
+      max-width: 450px;
+      color: rgba(255,255,255,0.58);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    footer h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #d8b783;
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.68);
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 22px;
+      color: rgba(255,255,255,0.45);
+      font-size: 12px;
+    }
+
+    /* =========================
+       WHATSAPP FLOAT
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        gap: 15px;
       }
 
-      .hero h1 {
-        font-size: 34px;
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 70px 0;
       }
 
       .hero {
-        padding: 60px 20px;
+        min-height: auto;
+      }
+
+      .hero-card {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .service-grid,
+      .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .booking-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        min-height: 72px;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 19px;
+      }
+
+      .brand-location {
+        font-size: 9px;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 72px;
+        background: var(--ivory);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-text {
+        font-size: 16px;
       }
 
       section {
-        padding: 45px 20px;
+        padding: 75px 0;
       }
 
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .service-grid,
+      .review-grid,
+      .about-points {
+        grid-template-columns: 1fr;
+      }
+
+      .price-header {
+        padding: 30px;
+        display: block;
+      }
+
+      .price-header h2 {
+        font-size: 35px;
+        margin-bottom: 12px;
+      }
+
+      .price-row {
+        padding: 22px 25px;
+      }
+
+      .price-row h3 {
+        font-size: 19px;
+      }
+
+      .price-value {
+        font-size: 19px;
+      }
+
+      .booking-form {
+        padding: 25px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
     }
   </style>
+
+  <!-- Local Business Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Brow Art Studio",
+    "description": "Beauty salon offering eyebrow threading, waxing, facials, brow tinting and lash tinting in Wyndham Vale, Victoria.",
+    "image": "assets/logo.jpg",
+    "telephone": "+61 432 744 406",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Burnelli Way",
+      "addressLocality": "Wyndham Vale",
+      "addressRegion": "VIC",
+      "postalCode": "3024",
+      "addressCountry": "AU"
+    },
+    "areaServed": [
+      "Wyndham Vale",
+      "Werribee",
+      "Tarneit",
+      "Hoppers Crossing",
+      "Truganina",
+      "Point Cook"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-<header>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-  <div class="logo">
-    Brow Art Studio
-  </div>
+  <header>
+    <div class="container nav">
 
-  <div class="tagline">
-    Beauty • Brows • Facials
-  </div>
-
-</header>
-
-
-<main>
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <h1>
-      Brow Art Studio
-    </h1>
-
-    <p>
-      Beauty and brow services in Wyndham Vale, Victoria.
-      From eyebrow threading and waxing to facials, brow tinting,
-      lash lift and brow lamination.
-    </p>
-
-    <a class="button" href="tel:0432744406">
-      Call 0432 744 406
-    </a>
-
-    <a class="button secondary" href="sms:0432744406">
-      Send SMS
-    </a>
-
-  </section>
-
-
-  <!-- GOOGLE REVIEWS -->
-
-  <section class="reviews-section">
-
-    <div class="reviews-card">
-
-      <div class="stars">
-        ★★★★★
-      </div>
-
-      <div class="review-title">
-        Loved by our customers
-      </div>
-
-      <p class="review-text">
-        Brow Art Studio has built a strong reputation for
-        quality brow and beauty services, with customers
-        consistently sharing positive experiences on Google.
-      </p>
-
-      <a
-        class="button google"
-        href="https://share.google/ydH5SYLV5wKy5w2xC"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ⭐ View us on Google
+      <a href="#home" class="brand">
+        <img src="assets/logo.jpg" alt="Brow Art Studio logo">
+        <div class="brand-text">
+          <div class="brand-name">Brow Art Studio</div>
+          <div class="brand-location">Wyndham Vale · Victoria</div>
+        </div>
       </a>
 
-      <p class="review-note">
-        Read our latest customer reviews and experiences on Google.
-      </p>
+      <button class="mobile-menu" aria-label="Open menu" onclick="toggleMenu()">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#reviews" onclick="closeMenu()">Reviews</a></li>
+        <li><a href="#location" onclick="closeMenu()">Location</a></li>
+        <li><a href="#booking" class="nav-book" onclick="closeMenu()">Book Now</a></li>
+      </ul>
 
     </div>
+  </header>
 
-  </section>
 
+  <!-- =========================
+       HERO
+  ========================= -->
 
-  <!-- SERVICES -->
+  <main>
 
-  <section>
+    <section class="hero" id="home">
 
-    <h2>
-      Our Services
-    </h2>
+      <div class="hero-content">
 
-    <div class="services">
+        <div>
+          <div class="eyebrow">Beauty · Brows · Confidence</div>
 
-      <div class="service">
+          <h1>
+            Beautiful brows.<br>
+            <span>Beautiful you.</span>
+          </h1>
 
-        <h3>
-          Threading
-        </h3>
+          <p class="hero-text">
+            Welcome to Brow Art Studio — your local destination for
+            beautifully shaped brows, smooth skin and personalised beauty
+            services in Wyndham Vale.
+          </p>
 
-        <p>
-          Eyebrow, upper lip, chin, sides, forehead and
-          full face threading.
-        </p>
+          <div class="hero-buttons">
+            <a href="#booking" class="btn btn-primary">
+              Book an Appointment
+            </a>
+
+            <a href="tel:0432744406" class="btn btn-secondary">
+              Call 0432 744 406
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-inner">
+
+            <div>
+              <img
+                src="assets/logo.jpg"
+                alt="Brow Art Studio"
+                class="hero-logo"
+              >
+
+              <h2>Brow Art Studio</h2>
+
+              <p>
+                Professional beauty services<br>
+                in Wyndham Vale
+              </p>
+            </div>
+
+          </div>
+        </div>
 
       </div>
+    </section>
 
 
-      <div class="service">
+    <!-- =========================
+         TRUST
+    ========================= -->
 
-        <h3>
-          Facials
-        </h3>
+    <div class="trust-bar">
 
-        <p>
-          Facial Clean Up, Lotus Facial, Bridal Glow,
-          O3 Facial and Korean Facial.
-          All listed facials include a back massage.
-        </p>
+      <div class="container trust-grid">
 
-      </div>
+        <div class="trust-item">
+          <div class="trust-number">122+</div>
+          <div class="trust-label">Google Reviews</div>
+        </div>
 
+        <div class="trust-item">
+          <div class="trust-number">5★</div>
+          <div class="trust-label">Customer Experience</div>
+        </div>
 
-      <div class="service">
-
-        <h3>
-          Tint & Lift
-        </h3>
-
-        <p>
-          Eyebrow tint, eyelash tint, hybrid brow tint,
-          hybrid lash tint, brow henna, lash lift and
-          brow lamination.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <h3>
-          Waxing
-        </h3>
-
-        <p>
-          Eyebrow, upper lip, chin, sides, forehead,
-          half arms, full arms, half legs, full legs
-          and underarms.
-        </p>
+        <div class="trust-item">
+          <div class="trust-number">Local</div>
+          <div class="trust-label">Wyndham Vale Beauty Studio</div>
+        </div>
 
       </div>
 
     </div>
 
-  </section>
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section class="services" id="services">
+
+      <div class="container">
+
+        <div class="section-heading center">
+          <div class="eyebrow">Our Services</div>
+
+          <h2>
+            Simple beauty.<br>
+            <em>Beautiful results.</em>
+          </h2>
+
+          <p>
+            Professional beauty treatments designed to help you look
+            polished, feel confident and leave feeling your best.
+          </p>
+        </div>
 
 
-  <!-- PRICE LIST -->
+        <div class="service-grid">
 
-  <section>
+          <article class="service-card">
+            <div class="service-number">01 · BROWS</div>
 
-    <h2>
-      Price List
-    </h2>
+            <h3>Eyebrow Threading</h3>
 
-    <div class="price-list">
+            <p>
+              Precise eyebrow shaping using traditional threading
+              techniques for a clean, defined finish.
+            </p>
 
-      <div class="price-row">
-        <span>Eyebrow Threading</span>
-        <span class="price">$10</span>
+            <div class="service-price">
+              <span class="price">Enquire</span>
+              <a href="#booking" class="book-small">BOOK →</a>
+            </div>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">02 · WAXING</div>
+
+            <h3>Waxing</h3>
+
+            <p>
+              Professional waxing services for smooth, clean and
+              beautifully maintained skin.
+            </p>
+
+            <div class="service-price">
+              <span class="price">Enquire</span>
+              <a href="#booking" class="book-small">BOOK →</a>
+            </div>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">03 · FACIALS</div>
+
+            <h3>Facials</h3>
+
+            <p>
+              Relaxing facial treatments designed to refresh and
+              rejuvenate your skin.
+            </p>
+
+            <div class="service-price">
+              <span class="price">From $60</span>
+              <a href="#booking" class="book-small">BOOK →</a>
+            </div>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">04 · BROWS</div>
+
+            <h3>Brow Tinting</h3>
+
+            <p>
+              Enhance your natural brows with professional tinting
+              for a fuller and more defined appearance.
+            </p>
+
+            <div class="service-price">
+              <span class="price">Enquire</span>
+              <a href="#booking" class="book-small">BOOK →</a>
+            </div>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">05 · LASHES</div>
+
+            <h3>Lash Tinting</h3>
+
+            <p>
+              Add definition to your lashes with a professional tint
+              that enhances your natural look.
+            </p>
+
+            <div class="service-price">
+              <span class="price">Enquire</span>
+              <a href="#booking" class="book-small">BOOK →</a>
+            </div>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">06 · BEAUTY</div>
+
+            <h3>Bridal & Occasion</h3>
+
+            <p>
+              Special beauty treatments for bridal occasions,
+              celebrations and important events.
+            </p>
+
+            <div class="service-price">
+              <span class="price">Enquire</span>
+              <a href="#booking" class="book-small">BOOK →</a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         FEATURED PRICES
+    ========================= -->
+
+    <section class="featured">
+
+      <div class="container">
+
+        <div class="price-list">
+
+          <div class="price-header">
+
+            <div>
+              <div class="eyebrow">Featured Treatments</div>
+              <h2>Selected Prices</h2>
+            </div>
+
+            <p>
+              A selection of our popular treatments. Contact us for
+              the complete current service menu.
+            </p>
+
+          </div>
+
+
+          <div class="price-row">
+
+            <div>
+              <h3>Lotus Facial</h3>
+              <p>Relaxing facial treatment</p>
+            </div>
+
+            <div class="price-value">$60</div>
+
+          </div>
+
+
+          <div class="price-row">
+
+            <div>
+              <h3>Bridal Glow</h3>
+              <p>Beauty treatment for your special occasion</p>
+            </div>
+
+            <div class="price-value">$60</div>
+
+          </div>
+
+
+          <div class="price-row">
+
+            <div>
+              <h3>Full Legs Waxing</h3>
+              <p>Professional full-leg waxing service</p>
+            </div>
+
+            <div class="price-value">$30</div>
+
+          </div>
+
+
+          <div class="price-row">
+
+            <div>
+              <h3>Other Beauty Services</h3>
+              <p>Brows, threading, tinting and additional waxing services</p>
+            </div>
+
+            <div>
+              <a href="#booking" class="btn btn-secondary" style="color:white;border-color:rgba(255,255,255,.5);">
+                Enquire
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-logo">
+          <img
+            src="assets/logo.jpg"
+            alt="Brow Art Studio Wyndham Vale"
+          >
+        </div>
+
+
+        <div class="about-content">
+
+          <div class="eyebrow">About Brow Art Studio</div>
+
+          <h2>
+            Beauty that feels<br>
+            <span>personal.</span>
+          </h2>
+
+          <p>
+            Brow Art Studio is a local beauty studio in Wyndham Vale,
+            Victoria, focused on creating beautifully finished brows,
+            smooth skin and natural-looking beauty results.
+          </p>
+
+          <p>
+            Whether you are looking for regular eyebrow threading,
+            waxing, a relaxing facial, brow and lash tinting or a
+            special treatment before an important occasion, our goal
+            is simple — to make you feel confident when you walk out.
+          </p>
+
+
+          <div class="about-points">
+
+            <div class="about-point">
+              ✓ Personalised service
+            </div>
+
+            <div class="about-point">
+              ✓ Professional treatments
+            </div>
+
+            <div class="about-point">
+              ✓ Local Wyndham Vale studio
+            </div>
+
+            <div class="about-point">
+              ✓ Appointment focused
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="price-row">
-        <span>Upper Lip Threading</span>
-        <span class="price">$5</span>
+    </section>
+
+
+    <!-- =========================
+         REVIEWS
+    ========================= -->
+
+    <section class="reviews" id="reviews">
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <div class="eyebrow">Client Love</div>
+
+          <h2>
+            Loved by our<br>
+            <em>local clients.</em>
+          </h2>
+
+          <p>
+            See what clients are saying about their experience
+            at Brow Art Studio.
+          </p>
+
+        </div>
+
+
+        <div class="review-summary">
+
+          <div class="review-score">5.0</div>
+
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="review-count">
+              Based on 122 Google reviews
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="review-grid">
+
+          <article class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+              Beautifully shaped brows and a lovely experience.
+              Very happy with the result.
+            </p>
+
+            <div class="review-name">
+              Verified Google Review
+            </div>
+
+          </article>
+
+
+          <article class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+              Professional service, friendly experience and
+              great attention to detail.
+            </p>
+
+            <div class="review-name">
+              Verified Google Review
+            </div>
+
+          </article>
+
+
+          <article class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+              Always happy with the results. A convenient local
+              beauty studio in Wyndham Vale.
+            </p>
+
+            <div class="review-name">
+              Verified Google Review
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="google-link">
+
+          <a
+            href="https://share.google/RrDmWeNtSTKy9zKo8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View our Google reviews →
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="price-row">
-        <span>Chin Threading</span>
-        <span class="price">$5</span>
+    </section>
+
+
+    <!-- =========================
+         BOOKING
+    ========================= -->
+
+    <section class="booking" id="booking">
+
+      <div class="container booking-grid">
+
+        <div class="booking-content">
+
+          <div class="eyebrow">Appointments</div>
+
+          <h2>
+            Ready for your<br>
+            <em>next beauty appointment?</em>
+          </h2>
+
+          <p>
+            Send us your preferred treatment and appointment details.
+            We will contact you to confirm availability.
+          </p>
+
+
+          <div class="contact-details">
+
+            <div class="contact-item">
+
+              <div class="contact-label">Phone</div>
+
+              <div class="contact-value">
+                <a href="tel:0432744406">
+                  0432 744 406
+                </a>
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-label">Address</div>
+
+              <div class="contact-value">
+                12 Burnelli Way, Wyndham Vale VIC 3024
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-label">Bookings</div>
+
+              <div class="contact-value">
+                WhatsApp · SMS · Phone
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="booking-form">
+
+          <h3>Request an Appointment</h3>
+
+          <p>
+            Complete the form and continue through WhatsApp to
+            send your booking request.
+          </p>
+
+
+          <form id="bookingForm">
+
+            <div class="form-grid">
+
+              <div class="form-group">
+
+                <label for="name">
+                  Your Name
+                </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Your name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Your phone number"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="service">
+                  Service
+                </label>
+
+                <select id="service" required>
+
+                  <option value="">
+                    Select a service
+                  </option>
+
+                  <option value="Eyebrow Threading">
+                    Eyebrow Threading
+                  </option>
+
+                  <option value="Waxing">
+                    Waxing
+                  </option>
+
+                  <option value="Lotus Facial">
+                    Lotus Facial — $60
+                  </option>
+
+                  <option value="Bridal Glow">
+                    Bridal Glow — $60
+                  </option>
+
+                  <option value="Full Legs Waxing">
+                    Full Legs Waxing — $30
+                  </option>
+
+                  <option value="Brow Tinting">
+                    Brow Tinting
+                  </option>
+
+                  <option value="Lash Tinting">
+                    Lash Tinting
+                  </option>
+
+                  <option value="Other">
+                    Other / Multiple Services
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="date">
+                  Preferred Date
+                </label>
+
+                <input
+                  type="date"
+                  id="date"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="time">
+                  Preferred Time
+                </label>
+
+                <select id="time">
+
+                  <option value="">
+                    Select preferred time
+                  </option>
+
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                  <option>Evening</option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="message">
+                  Message
+                </label>
+
+                <input
+                  type="text"
+                  id="message"
+                  placeholder="Anything else we should know?"
+                >
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <button
+                  type="submit"
+                  class="form-submit"
+                >
+                  Continue to WhatsApp →
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
       </div>
 
-      <div class="price-row">
-        <span>Sides Threading</span>
-        <span class="price">$10</span>
+    </section>
+
+
+    <!-- =========================
+         LOCATION
+    ========================= -->
+
+    <section class="location" id="location">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">Find Us</div>
+
+          <h2>
+            Your local beauty<br>
+            <em>studio in Wyndham Vale.</em>
+          </h2>
+
+          <p>
+            Conveniently located in Wyndham Vale, Victoria.
+            Contact us before visiting to arrange your appointment.
+          </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+          <div class="location-card">
+
+            <h3>Brow Art Studio</h3>
+
+            <p>
+              <strong>Address</strong><br>
+              12 Burnelli Way<br>
+              Wyndham Vale VIC 3024<br>
+              Australia
+            </p>
+
+            <p style="margin-top:20px;">
+              <strong>Phone</strong><br>
+              <a href="tel:0432744406">
+                0432 744 406
+              </a>
+            </p>
+
+            <div style="margin-top:25px;">
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=12+Burnelli+Way+Wyndham+Vale+VIC+3024"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                Get Directions →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="map-box">
+
+            <div>
+
+              <h3>Wyndham Vale</h3>
+
+              <p>
+                Victoria, Australia
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=12+Burnelli+Way+Wyndham+Vale+VIC+3024"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                Open in Google Maps
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="price-row">
-        <span>Forehead Threading</span>
-        <span class="price">$5</span>
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-brand">
+
+            <img
+              src="assets/logo.jpg"
+              alt="Brow Art Studio logo"
+            >
+
+            <h3>Brow Art Studio</h3>
+
+          </div>
+
+          <p class="footer-about">
+            Professional beauty services in Wyndham Vale,
+            Victoria — specialising in brows, threading,
+            waxing, facials and tinting.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Explore</h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#services">Services</a>
+            </li>
+
+            <li>
+              <a href="#about">About</a>
+            </li>
+
+            <li>
+              <a href="#reviews">Reviews</a>
+            </li>
+
+            <li>
+              <a href="#location">Location</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Contact</h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="tel:0432744406">
+                0432 744 406
+              </a>
+            </li>
+
+            <li>
+              <a href="#booking">
+                Book an Appointment
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://share.google/RrDmWeNtSTKy9zKo8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Reviews
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
       </div>
 
-      <div class="price-row">
-        <span>Full Face Threading</span>
-        <span class="price">$30</span>
-      </div>
 
-      <div class="price-row">
-        <span>Bleach</span>
-        <span class="price">$10</span>
-      </div>
+      <div class="footer-bottom">
 
-      <div class="price-row">
-        <span>Facial Clean Up</span>
-        <span class="price">$40</span>
-      </div>
+        <div>
+          © 2026 Brow Art Studio · Wyndham Vale, Victoria
+        </div>
 
-      <div class="price-row">
-        <span>Lotus Facial</span>
-        <span class="price">$50</span>
-      </div>
+        <div>
+          All rights reserved.
+        </div>
 
-      <div class="price-row">
-        <span>Bridal Glow</span>
-        <span class="price">$50</span>
-      </div>
-
-      <div class="price-row">
-        <span>O3 Facial</span>
-        <span class="price">$60</span>
-      </div>
-
-      <div class="price-row">
-        <span>Korean Facial</span>
-        <span class="price">$70</span>
-      </div>
-
-      <div class="price-row">
-        <span>Eyebrow Tint</span>
-        <span class="price">$10</span>
-      </div>
-
-      <div class="price-row">
-        <span>Eyelash Tint</span>
-        <span class="price">$15</span>
-      </div>
-
-      <div class="price-row">
-        <span>Hybrid Brow Tint</span>
-        <span class="price">$25</span>
-      </div>
-
-      <div class="price-row">
-        <span>Hybrid Lash Tint</span>
-        <span class="price">$30</span>
-      </div>
-
-      <div class="price-row">
-        <span>Brow Henna</span>
-        <span class="price">$35</span>
-      </div>
-
-      <div class="price-row">
-        <span>Lash Lift</span>
-        <span class="price">$50</span>
-      </div>
-
-      <div class="price-row">
-        <span>Brow Lamination</span>
-        <span class="price">$40</span>
-      </div>
-
-      <div class="price-row">
-        <span>Eyebrow Waxing</span>
-        <span class="price">$10</span>
-      </div>
-
-      <div class="price-row">
-        <span>Upper Lip Waxing</span>
-        <span class="price">$5</span>
-      </div>
-
-      <div class="price-row">
-        <span>Chin Waxing</span>
-        <span class="price">$5</span>
-      </div>
-
-      <div class="price-row">
-        <span>Sides Waxing</span>
-        <span class="price">$10</span>
-      </div>
-
-      <div class="price-row">
-        <span>Forehead Waxing</span>
-        <span class="price">$5</span>
-      </div>
-
-      <div class="price-row">
-        <span>Half Arms Waxing</span>
-        <span class="price">$15</span>
-      </div>
-
-      <div class="price-row">
-        <span>Full Arms Waxing</span>
-        <span class="price">$20</span>
-      </div>
-
-      <div class="price-row">
-        <span>Half Legs Waxing</span>
-        <span class="price">$20</span>
-      </div>
-
-      <div class="price-row">
-        <span>Full Legs Waxing</span>
-        <span class="price">$25</span>
-      </div>
-
-      <div class="price-row">
-        <span>Underarms Waxing</span>
-        <span class="price">$10</span>
       </div>
 
     </div>
 
-  </section>
+  </footer>
 
 
-  <!-- BOOKING -->
+  <!-- =========================
+       WHATSAPP
+  ========================= -->
 
-  <section>
-
-    <div class="booking">
-
-      <h2>
-        Appointments Essential
-      </h2>
-
-      <p>
-        Brow Art Studio is an appointment-based business.
-        Please contact us before visiting.
-      </p>
-
-      <br>
-
-      <a class="button" href="tel:0432744406">
-        Call 0432 744 406
-      </a>
-
-      <a class="button secondary" href="sms:0432744406">
-        Send SMS
-      </a>
-
-      <p style="margin-top:20px;">
-        Promotions and specially priced service packages
-        may be available from time to time.
-      </p>
-
-    </div>
-
-  </section>
+  <a
+    class="whatsapp"
+    href="https://wa.me/61432744406"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact Brow Art Studio on WhatsApp"
+    title="WhatsApp Brow Art Studio"
+  >
+    ☎
+  </a>
 
 
-  <!-- CONTACT -->
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
-  <section class="contact">
+  <script>
 
-    <h2>
-      Contact Brow Art Studio
-    </h2>
-
-    <p>
-      <strong>Address:</strong>
-      12 Burchelli Way, Wyndham Vale VIC 3024, Australia
-    </p>
-
-    <p>
-      <strong>Phone:</strong>
-      <a href="tel:0432744406">
-        0432 744 406
-      </a>
-    </p>
-
-    <p>
-      <strong>Bookings:</strong>
-      Please contact us by WhatsApp, SMS or phone.
-    </p>
-
-  </section>
-
-</main>
+    function toggleMenu() {
+      document
+        .getElementById("navLinks")
+        .classList.toggle("active");
+    }
 
 
-<footer>
+    function closeMenu() {
+      document
+        .getElementById("navLinks")
+        .classList.remove("active");
+    }
 
-  © 2026 Brow Art Studio · Wyndham Vale, Victoria
 
-</footer>
+    document
+      .getElementById("bookingForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name =
+          document.getElementById("name").value.trim();
+
+        const phone =
+          document.getElementById("phone").value.trim();
+
+        const service =
+          document.getElementById("service").value;
+
+        const date =
+          document.getElementById("date").value;
+
+        const time =
+          document.getElementById("time").value;
+
+        const message =
+          document.getElementById("message").value.trim();
+
+
+        const formattedDate = date
+          ? new Date(date + "T00:00:00")
+              .toLocaleDateString("en-AU", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+              })
+          : "Not specified";
+
+
+        let whatsappMessage =
+          "Hello Brow Art Studio,%0A%0A" +
+          "I would like to request an appointment.%0A%0A" +
+          "Name: " + encodeURIComponent(name) + "%0A" +
+          "Phone: " + encodeURIComponent(phone) + "%0A" +
+          "Service: " + encodeURIComponent(service) + "%0A" +
+          "Preferred Date: " + encodeURIComponent(formattedDate) + "%0A" +
+          "Preferred Time: " + encodeURIComponent(time || "Not specified") + "%0A";
+
+
+        if (message) {
+          whatsappMessage +=
+            "Message: " +
+            encodeURIComponent(message) +
+            "%0A";
+        }
+
+
+        whatsappMessage +=
+          "%0AThank you.";
+
+
+        const whatsappURL =
+          "https://wa.me/61432744406?text=" +
+          whatsappMessage;
+
+
+        window.open(
+          whatsappURL,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+      });
+
+  </script>
 
 </body>
 </html>
